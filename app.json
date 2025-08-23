@@ -7,6 +7,11 @@
     "icon": "./assets/images/icon.png",
     "scheme": "uberclone",
     "userInterfaceStyle": "automatic",
+    "splash": {
+      "image": "./assets/images/splash.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#2f80ed"
+    },
     "newArchEnabled": true,
     "ios": {
       "supportsTablet": true
