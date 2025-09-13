@@ -31,5 +31,3 @@ export async function POST(request: Request) {
     return Response.json({ error: error }, { status: 500 });
   }
 }
-// See https://neon.com/docs/serverless/serverless-driver
-// for more information

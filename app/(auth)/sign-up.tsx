@@ -1,6 +1,5 @@
 import { icons, images } from "@/constants";
 import { View, Text, ScrollView, Image, Alert } from "react-native";
-import { SafeAreaView } from "react-native-safe-area-context";
 import InputField from "@/components/InputField";
 import { useState } from "react";
 import CustomButton from "@/components/CustomButton";
@@ -118,6 +117,7 @@ const SignUp = () => {
           <InputField
             label="Name"
             placeholder="Enter your name"
+            placeholderTextColor={"grey"}
             icon={icons.person}
             value={form.name}
             onChangeText={(value) => setForm({ ...form, name: value })}
@@ -125,6 +125,7 @@ const SignUp = () => {
           <InputField
             label="Email"
             placeholder="Enter your Email"
+            placeholderTextColor={"grey"}
             icon={icons.email}
             value={form.email}
             onChangeText={(value) => setForm({ ...form, email: value })}
@@ -132,6 +133,7 @@ const SignUp = () => {
           <InputField
             label="Password"
             placeholder="Enter your Password"
+            placeholderTextColor={"grey"}
             icon={icons.lock}
             secureTextEntry={true}
             value={form.password}

@@ -1,8 +1,6 @@
-import { icons } from "@/constants";
 import { GoogleInputProps } from "@/types/type";
-import { View, Text, Image } from "react-native";
+import { View } from "react-native";
 import GooglePlacesTextInput from "react-native-google-places-textinput";
-import { withTiming } from "react-native-reanimated";
 
 const googleplacesApiKey = process.env.EXPO_PUBLIC_GOOGLE_API_KEY ?? "";
 // console.log(googleplacesApiKey);
@@ -21,7 +19,7 @@ const GoogleTextInput = ({
       fetchDetails={true}
       detailsFields={["formattedAddress", "location"]}
       apiKey={googleplacesApiKey}
-      placeHolderText="🔍 Where do you want to go ?"
+      placeHolderText={initialLocation ?? "Where do you want to go?"}
       onPlaceSelect={(place, sessionToken?) => {
         handlePress({
           latitude: place.details?.location.latitude,

@@ -1,12 +1,11 @@
 import { icons, images } from "@/constants";
 import { View, Text, ScrollView, Image } from "react-native";
-import { SafeAreaView } from "react-native-safe-area-context";
 import InputField from "@/components/InputField";
 import { useState } from "react";
 import CustomButton from "@/components/CustomButton";
 import { Link, useRouter } from "expo-router";
 import OAuth from "@/components/OAuth";
-import { useAuth, useSignIn } from "@clerk/clerk-expo";
+import { useSignIn } from "@clerk/clerk-expo";
 
 const SignIn = () => {
   const [form, setForm] = useState({
@@ -57,6 +56,7 @@ const SignIn = () => {
           <InputField
             label="Email"
             placeholder="Enter your Email"
+            placeholderTextColor={"grey"}
             icon={icons.email}
             value={form.email}
             onChangeText={(value) => setForm({ ...form, email: value })}
@@ -64,6 +64,7 @@ const SignIn = () => {
           <InputField
             label="Password"
             placeholder="Enter your Password"
+            placeholderTextColor={"grey"}
             icon={icons.lock}
             secureTextEntry={true}
             value={form.password}
@@ -86,7 +87,7 @@ const SignIn = () => {
           <Text>Dont Have an Account ? </Text>
           <Text className="text-primary-500">Sign Up</Text>
         </Link>
-
+        {/* TODO: pls do ts mf */}
         {/* Verification Modal */}
       </View>
     </ScrollView>

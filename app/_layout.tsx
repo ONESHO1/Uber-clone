@@ -1,16 +1,9 @@
-import {
-  DarkTheme,
-  DefaultTheme,
-  ThemeProvider,
-} from "@react-navigation/native";
 import { useFonts } from "expo-font";
 import { SplashScreen, Stack } from "expo-router";
-import { StatusBar } from "expo-status-bar";
 import { useEffect } from "react";
 import "react-native-reanimated";
 
 import { ClerkProvider } from "@clerk/clerk-expo";
-import { Slot } from "expo-router";
 import { tokenCache } from "@clerk/clerk-expo/token-cache";
 
 SplashScreen.preventAutoHideAsync();
